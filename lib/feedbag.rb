@@ -97,7 +97,7 @@ class Feedbag
     end
 
     begin
-      html = open(url, :allow_redirections => :all, "User-Agent" => "Mozilla/5.0") do |f|
+      html = open(url, :allow_redirections => :all, "User-Agent" => "Mozilla/5.0 (X11; CrOS x86_64 11151.59.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.94 Safari/537.36") do |f|
         content_type = f.content_type.downcase
         if content_type == "application/octet-stream" # open failed
           content_type = f.meta["content-type"].gsub(/;.*$/, '')
